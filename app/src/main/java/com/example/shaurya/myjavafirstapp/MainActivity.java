@@ -1,5 +1,7 @@
 package com.example.shaurya.myjavafirstapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -85,18 +87,19 @@ public class MainActivity extends AppCompatActivity {
 
         EditText nameinput = (EditText) findViewById(R.id.name);
         String Sname = nameinput.getText().toString();
-        if (quantity != 0) {
+        if (quantity != 0 && !Sname.isEmpty()) {
             int price = CalculatePrice(quantity);
             String priceMessage = OrderSummary(price, Sname);
 
-//            Intent intent = new Intent(Intent.ACTION_SENDTO);
-//            intent.setData(Uri.parse("mailto:")); // only email apps should handle this
-//            intent.putExtra(Intent.EXTRA_SUBJECT, "Just Java for "+ Sname);
-//            intent.putExtra(Intent.EXTRA_EMAIL,"Shauryauppal00111@gmail.com");
-//            intent.putExtra(Intent.EXTRA_TEXT,priceMessage)
-//            if (intent.resolveActivity(getPackageManager()) != null) {
-//                startActivity(intent);
-//            }
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Just Java for "+ Sname);
+            intent.putExtra(Intent.EXTRA_EMAIL,new String[] {"Shauryauppal00111@gmail.com"});
+            intent.putExtra(Intent.EXTRA_TEXT,priceMessage);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
+
             displayMessage(priceMessage);
         }
     }
