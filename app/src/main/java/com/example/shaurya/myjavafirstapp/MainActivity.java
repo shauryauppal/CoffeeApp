@@ -10,8 +10,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.NumberFormat;
-
 /**
  * This app displays an order form to order coffee.
  */
@@ -100,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
 
-            displayMessage(priceMessage);
+//            displayMessage(priceMessage);
         }
     }
 
@@ -108,18 +106,18 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given price on the screen.
      */
-    private void displayPrice(int number) {
-        TextView orderTextView = (TextView) findViewById(R.id.order_summary_text_view);
-        orderTextView.setText(NumberFormat.getCurrencyInstance().format(number));
-    }
+//    private void displayPrice(int number) {
+//        TextView orderTextView = (TextView) findViewById(R.id.order_summary_text_view);
+//        orderTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+//    }
 
     /**
      * This method displays the given text on the screen.
      */
-    private void displayMessage(String message) {
-        TextView orderTextView = (TextView) findViewById(R.id.order_summary_text_view);
-        orderTextView.setText(message);
-    }
+//    private void displayMessage(String message) {
+//        TextView orderTextView = (TextView) findViewById(R.id.order_summary_text_view);
+//        orderTextView.setText(message);
+//    }
 
     /**
      * This method displays the given quantity value on the screen.
