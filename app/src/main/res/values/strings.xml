@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My java first app</string>
+    <string name="Name">Name</string>
+    <string name="thank_you">Thank You!!!!</string>
 </resources>

@@ -18,22 +18,19 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/name"
-                android:inputType="textCapWords"
-                android:hint="Name"
                 android:layout_margin="16dp"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:onClick="submitOrder"/>
+                android:hint="@string/Name"
+                android:inputType="textCapWords"
+                android:onClick="submitOrder"
+                android:textAppearance="?android:textAppearanceMedium" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/HeaderTextStyle"
                 android:layout_margin="16dp"
-                android:text="Topping"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="@color/colorPrimaryDark" />
+                android:text="Topping" />
 
             <CheckBox
                 android:id="@+id/topping"
@@ -45,21 +42,20 @@
                 android:textAppearance="?android:textAppearanceMedium" />
 
             <CheckBox
+                android:id="@+id/white_sugar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:onClick="hasticked"
                 android:text="White Sugar"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:onClick="hasticked"
-                android:layout_margin="16dp"
-                android:id="@+id/white_sugar"
 
                 />
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/HeaderTextStyle"
                 android:layout_margin="16dp"
-                android:text="Quantity"
-                android:textAppearance="?android:textAppearanceLarge" />
+                android:text="Quantity" />
 
             <LinearLayout
                 android:layout_width="match_parent"

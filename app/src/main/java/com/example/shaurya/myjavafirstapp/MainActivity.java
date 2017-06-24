@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private String OrderSummary(int price, String Sname) {
         String message = "My name is->" + Sname + "\nWould You like Brown Sugar->" + hasBrownSugar + "\nWould you like White Sugar->" + hasWhiteSugar +
-                "\nTotal Billl:Rs." + price + " \nQuantity Ordered:" + quantity + " \nThank You!!!!";
+                "\nTotal Billl:Rs." + price + " \nQuantity Ordered:" + quantity + "\n"+getString(R.string.thank_you);
         return message;
     }
 
